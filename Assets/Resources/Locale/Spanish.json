@@ -1,0 +1,18 @@
+﻿{
+	"TITLE_APP" : "Hundir la Flota",
+	"SUBTITLE_APP" : "Un juego de OliLogic Studios",
+	"COPYRIGHT_APP" : "Copyright © 2017",
+	"CREDITS_APP":"Creado y desarrollado por OliLogic Studios",
+
+	"PRELOAD_SCREEN_GAME": "Cargando...",
+	"BUTTON_MUTLIPLAYER" : "Jugar Online",
+	"BUTTON_SINGLEPLAYER" : "Jugar",
+	"BUTTON_SETTINGS" : "Configuración",
+	"BUTTON_EXIT" : "Salir",
+
+	"TITLE_SINGLE_PLAYER_SCREEN" : "Prepárate...",
+	"TOOGLE_LEVEL_EASY" : "Nivel fácil",
+	"TOOGLE_LEVEL_MIDDLE" : "Nivel medio",
+	"TOOGLE_LEVEL_HARD" : "Nivel difícil",
+	"TOOGLE_LEVEL_EXTREME" : "Nivel extremo"
+}

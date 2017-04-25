@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e0b064f4503ac024ba438b1fd37c3913
+timeCreated: 1492164998
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Messenger Pigeons Personal Use
+  fontNames:
+  - Messenger Pigeons Personal Use
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
