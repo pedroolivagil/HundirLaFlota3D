@@ -9,8 +9,10 @@ public class SceneTranlatable : MonoBehaviour {
     // Use this for initialization
     void Start() {
         foreach (Text item in listTextTranslate) {
-            string texto = LocaleManager.GetInstance().TranslateStr(item.text.Trim());
-            item.text = texto;
+            if (item != null) {
+                string texto = LocaleManager.GetInstance().TranslateStr(item.text.Trim());
+                item.text = texto;
+            }
         }
     }
 }
