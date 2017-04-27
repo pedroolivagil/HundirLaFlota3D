@@ -8,16 +8,27 @@ public class GameManager : MonoBehaviour {
 
     public static readonly int SINGLE_PLAYER = 0;
     public static readonly int MULTI_PLAYER = 1;
-
+    public int screenWidth = 1920;
+    public int screenHeigth = 1080;
     public List<Text> listaTextoFadeOut;
     public float timeToFade = .05f;
     private static int gameMode;
+    private static List<Resolution> listResolution;
 
     // Use this for initialization
     void Start() {
         StartCoroutine(SecuencialFadeInText());
         StartCoroutine(SecuencialFadeOutText());
         DontDestroyOnLoad(gameObject);
+        listResolution = new List<Resolution>();
+        foreach (Resolution res in Screen.resolutions) {
+            if (!listResolution.Contains(res)) {
+                listResolution.Add(res);
+                if (res.width.Equals(screenWidth) && res.height.Equals(screenHeigth)) {
+                    SetResolutionGame(res);
+                }
+            }
+        }
     }
 
     public IEnumerator SecuencialFadeOutText() {
@@ -83,4 +94,17 @@ public class GameManager : MonoBehaviour {
         GameManager.gameMode = gameMode;
     }
 
+    public List<Resolution> GetListResolution() {
+        return listResolution;
+    }
+
+    public void SetResolutionGame(Resolution resolution) {
+        Debug.Log("Resolution has been changed: " + resolution.width + "x" + resolution.height);
+        Screen.SetResolution(resolution.width, resolution.height, true, resolution.refreshRate);
+        Screen.fullScreen = true;
+    }
+
+    public void ToogleFullScreen() {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
 }
