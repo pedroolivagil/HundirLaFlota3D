@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class BlackScreen : MonoBehaviour {
 
     public Slider sliderLoader;
-    public AsyncOperation loadScene;
+    private AsyncOperation loadScene;
 
     // Use this for initialization
     void Start() {
         //StartCoroutine(PreLoadScene());
         sliderLoader.value = 0;
-        loadScene = SceneManager.LoadSceneAsync(GameScenes.StarterSinglePlayer);
+        loadScene = SceneManager.LoadSceneAsync(GameScenes.StarterSinglePlayer, LoadSceneMode.Single);
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class BlackScreen : MonoBehaviour {
     }
 
     private void PreLoadScene() {
-        while (sliderLoader.value < 100) {
+        if (sliderLoader.value < 100) {
             //yield return new WaitForSeconds(Random.Range(.05f,.3f));
             Debug.Log("Preload scene progress: " + loadScene.progress * 100);
             sliderLoader.value = loadScene.progress * 100;
