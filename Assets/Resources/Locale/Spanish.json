@@ -9,6 +9,7 @@
 	"BUTTON_SINGLEPLAYER" : "Jugar",
 	"BUTTON_SETTINGS" : "Configuración",
 	"BUTTON_EXIT" : "Salir",
+	"BUTTON_VOLVER" : "Volver al menú",
 
 	"TITLE_SINGLE_PLAYER_SCREEN" : "Prepárate...",
 	"TOOGLE_LEVEL_EASY" : "Nivel fácil",
