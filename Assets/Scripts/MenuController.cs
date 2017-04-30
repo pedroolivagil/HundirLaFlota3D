@@ -4,12 +4,12 @@ public class MenuController : MonoBehaviour {
 
     public void ActionBtnSinglePlay() {
         Debug.Log("Play game");
-        GameManager.SetGameMode(GameManager.SINGLE_PLAYER);
-        GameManager.ChangeScreen(GameScenes.BlackScreen);
+        GameManager.ChangeScreen(GameScenes.StarterSinglePlayer, true);
     }
 
     public void ActionBtnMultiPlay() {
-        GameManager.SetGameMode(GameManager.MULTI_PLAYER);
+        //BlackScreen.SetNavigateScene(GameScenes.StarterMultiPlayer);
+        //GameManager.ChangeScreen(GameScenes.BlackScreen);
         Debug.Log("Play Multiplayer");
     }
 

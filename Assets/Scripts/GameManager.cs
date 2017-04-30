@@ -70,13 +70,13 @@ public class GameManager : MonoBehaviour {
         Application.Quit();
     }
 
-    public static void ChangeScreen(string screen) {
-        SceneManager.LoadScene(screen, LoadSceneMode.Single);
-        Time.timeScale = 1;
-    }
-
-    public static void ChangeScreen(int screen) {
-        SceneManager.LoadScene(screen, LoadSceneMode.Single);
+    public static void ChangeScreen(string screen, bool preload = false) {
+        if (preload) {
+            BlackScreen.SetNavigateScene(screen);
+            SceneManager.LoadScene(GameScenes.BlackScreen, LoadSceneMode.Single);
+        } else {
+            SceneManager.LoadScene(screen, LoadSceneMode.Single);
+        }
         Time.timeScale = 1;
     }
 
@@ -84,14 +84,6 @@ public class GameManager : MonoBehaviour {
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
         Time.timeScale = 1;
-    }
-
-    public static int GetGameMode() {
-        return GameManager.gameMode;
-    }
-
-    public static void SetGameMode(int gameMode) {
-        GameManager.gameMode = gameMode;
     }
 
     public List<Resolution> GetListResolution() {
