@@ -3,8 +3,8 @@
 	"SUBTITLE_APP" : "A game of OliLogic Studios",
 	"COPYRIGHT_APP" : "Copyright © 2017",
 	"CREDITS_APP":"Created and developed by OliLogic Studios",
-
 	"PRELOAD_SCREEN_GAME":"preparing boat...",
+
 	"BUTTON_MUTLIPLAYER" : "Play Online",
 	"BUTTON_SINGLEPLAYER" : "Play",
 	"BUTTON_SETTINGS" : "Settings",
@@ -13,8 +13,15 @@
 	"BUTTON_START" : "Start to play",
 
 	"TITLE_SINGLE_PLAYER_SCREEN" : "Get ready...",
+
 	"TOOGLE_LEVEL_EASY" : "Level easy",
 	"TOOGLE_LEVEL_MIDDLE" : "Level middle",
 	"TOOGLE_LEVEL_HARD" : "Level hard",
-	"TOOGLE_LEVEL_EXTREME" : "Level extreme"
+	"TOOGLE_LEVEL_EXTREME" : "Level extreme",
+	
+	 "DESCRIPT_EASY" : "Begin your story in the easiest way, but do not trust or perish.",
+     "DESCRIPT_MIDDLE" : "Begin your story in a more normal way, you must be cautious.",
+	 "DESCRIPT_HARD" : "Begin your story in the most difficult way, strive to the maximum or you will perish.",
+	 "DESCRIPT_EXTREME" : "Begin your story in an extreme way, here the tricks will not serve you, you must show your most strategic part or you will perish in an instant.",
+	 "DESCRIPT_BASE" : "The combat strategy is increased at each level and each time you will find it a little more complicated to move forward.\n\nChoose one of the 5 battles you must face, but choose wisely, you will not be able to rectify your decision. As a good commander, the decision will be most appropriate."
 }

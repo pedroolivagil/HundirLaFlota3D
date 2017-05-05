@@ -3,8 +3,8 @@
 	"SUBTITLE_APP" : "Un juego de OliLogic Studios",
 	"COPYRIGHT_APP" : "Copyright © 2017",
 	"CREDITS_APP":"Creado y desarrollado por OliLogic Studios",
-
 	"PRELOAD_SCREEN_GAME": "preparando embarcación...",
+
 	"BUTTON_MUTLIPLAYER" : "Jugar Online",
 	"BUTTON_SINGLEPLAYER" : "Jugar",
 	"BUTTON_SETTINGS" : "Configuración",
@@ -13,8 +13,15 @@
 	"BUTTON_START" : "Empezar a jugar",
 
 	"TITLE_SINGLE_PLAYER_SCREEN" : "Prepárate...",
+
 	"TOOGLE_LEVEL_EASY" : "Nivel fácil",
 	"TOOGLE_LEVEL_MIDDLE" : "Nivel medio",
 	"TOOGLE_LEVEL_HARD" : "Nivel difícil",
-	"TOOGLE_LEVEL_EXTREME" : "Nivel extremo"
+	"TOOGLE_LEVEL_EXTREME" : "Nivel extremo",
+
+	 "DESCRIPT_EASY" : "Comienza tu historia al modo más fácil, pero no te confíes o perecerás.",
+     "DESCRIPT_MIDDLE" : "Comienza tu historia en un modo más normal, deberás ser cauto.",
+	 "DESCRIPT_HARD" : "Comienza tu historia al modo más difícil, esfuérzate al máximo o perecerás.",
+	 "DESCRIPT_EXTREME" : "Comienza tu historia en un modo extremo, aquí las argucias no te servirán, deberás mostrar tu parte más estratégica o perecerás en un instante.",
+	 "DESCRIPT_BASE" : "La estrategia de combate va aumentado a cada nivel y cada vez te resultará un poco más complicado ir avanzando.\n\nElije una de las 5 batallas que debes afrontar, pero elije sabiamente, no podrás rectificar tu decisión. Como buen comandante, seguro que la decisión será la más adecuada."
 }
