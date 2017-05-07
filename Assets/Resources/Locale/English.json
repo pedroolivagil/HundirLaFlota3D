@@ -11,6 +11,8 @@
 	"BUTTON_EXIT" : "Exit Game",
 	"BUTTON_VOLVER" : "Back to menu",
 	"BUTTON_START" : "Start to play",
+	"BUTTON_SIGN_IN" : "Sign in...",
+	"BUTTON_SIGN_UP" : "Sign up...",
 
 	"TITLE_SINGLE_PLAYER_SCREEN" : "Get ready...",
 
@@ -28,5 +30,8 @@
 	"DESCRIPT_MIDDLE" : "Begin your story in a more normal way, you must be cautious.",
 	"DESCRIPT_HARD" : "Begin your story in the most difficult way, strive to the maximum or you will perish.",
 	"DESCRIPT_EXTREME" : "Begin your story in an extreme way, here the tricks will not serve you, you must show your most strategic part or you will perish in an instant.",
-	"DESCRIPT_BASE" : "The combat strategy is increased at each level and each time you will find it a little more complicated to move forward.{$BR$}{$BR$}Choose one of the {$VAR$} battles you must face, but choose wisely, you will not be able to rectify your decision. As a good commander, the decision will be most appropriate."
+	"DESCRIPT_BASE" : "The combat strategy is increased at each level and each time you will find it a little more complicated to move forward.{$BR$}{$BR$}Choose one of the {$VAR$} battles you must face, but choose wisely, you will not be able to rectify your decision. As a good commander, the decision will be most appropriate.",
+
+	"PLACEHOLDER_USERNAME" : "Enter user name",
+	"PLACEHOLDER_PASSWORD" : "Enter user password"
 }
