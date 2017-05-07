@@ -18,6 +18,11 @@
 	"TOOGLE_LEVEL_MIDDLE" : "Nivel medio",
 	"TOOGLE_LEVEL_HARD" : "Nivel difícil",
 	"TOOGLE_LEVEL_EXTREME" : "Nivel extremo",
+	"TOOGLE_CITY_FIRST":"Ciudad Krufs",
+	"TOOGLE_CITY_SECOND":"Ciudad Krebs",
+	"TOOGLE_CITY_THIRD":"Wentin Place",
+	"TOOGLE_CITY_FOURTH":"Villa Wool",
+	"TOOGLE_CITY_FIVETH":"Puerto Scooltown",
 
 	 "DESCRIPT_EASY" : "Comienza tu historia al modo más fácil, pero no te confíes o perecerás.",
      "DESCRIPT_MIDDLE" : "Comienza tu historia en un modo más normal, deberás ser cauto.",

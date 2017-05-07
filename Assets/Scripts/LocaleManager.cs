@@ -79,16 +79,17 @@ public class LocaleManager {
         if (jsonData != null) {
             try {
                 retorno = jsonData[key].ToString();
+                retorno = retorno.Replace(textReplaceLineBreak, "\n");
             } catch (Exception e) {
                 Debug.Log(e.Message);
                 try {
                     retorno = jsonDataDef[key].ToString();
+                    retorno = retorno.Replace(textReplaceLineBreak, "\n");
                 } catch (Exception ex) {
                     Debug.Log(ex.Message);
                     retorno = key;
                 }
             }
-            retorno = retorno.Replace(textReplaceLineBreak, "\n");
         }
         return retorno;
     }
@@ -96,8 +97,6 @@ public class LocaleManager {
     public string TranslateStr(string key, string[] parametros) {
         string texto = TranslateStr(key);
         foreach (string parm in parametros) {
-            Debug.Log("Parámetro: " + parm + "; Text: " + textReplace);
-            Debug.Log(texto);
             texto = texto.Replace(textReplace, parm);
         }
         return texto;
