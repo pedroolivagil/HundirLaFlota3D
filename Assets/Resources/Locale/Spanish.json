@@ -23,5 +23,5 @@
      "DESCRIPT_MIDDLE" : "Comienza tu historia en un modo más normal, deberás ser cauto.",
 	 "DESCRIPT_HARD" : "Comienza tu historia al modo más difícil, esfuérzate al máximo o perecerás.",
 	 "DESCRIPT_EXTREME" : "Comienza tu historia en un modo extremo, aquí las argucias no te servirán, deberás mostrar tu parte más estratégica o perecerás en un instante.",
-	 "DESCRIPT_BASE" : "La estrategia de combate va aumentado a cada nivel y cada vez te resultará un poco más complicado ir avanzando.\n\nElije una de las 5 batallas que debes afrontar, pero elije sabiamente, no podrás rectificar tu decisión. Como buen comandante, seguro que la decisión será la más adecuada."
+	 "DESCRIPT_BASE" : "La estrategia de combate va aumentado a cada nivel y cada vez te resultará un poco más complicado ir avanzando.{$BR$}{$BR$}Elije una de las {$VAR$} batallas que debes afrontar, pero elije sabiamente, no podrás rectificar tu decisión. Como buen comandante, seguro que la decisión será la más adecuada."
 }

@@ -14,6 +14,8 @@ public class LocaleManager {
     private static LocaleManager instance = null;
     private JsonData jsonData;
     private JsonData jsonDataDef;
+    public string textReplace = "{$VAR$}";
+    public string textReplaceLineBreak = "{$BR$}";
 
     public static LocaleManager GetInstance() {
         init();
@@ -86,8 +88,19 @@ public class LocaleManager {
                     retorno = key;
                 }
             }
+            retorno = retorno.Replace(textReplaceLineBreak, "\n");
         }
         return retorno;
+    }
+
+    public string TranslateStr(string key, string[] parametros) {
+        string texto = TranslateStr(key);
+        foreach (string parm in parametros) {
+            Debug.Log("Parámetro: " + parm + "; Text: " + textReplace);
+            Debug.Log(texto);
+            texto = texto.Replace(textReplace, parm);
+        }
+        return texto;
     }
 
     public string ValuesString() {
