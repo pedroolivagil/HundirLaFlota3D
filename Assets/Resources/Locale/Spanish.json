@@ -11,8 +11,11 @@
 	"BUTTON_EXIT" : "Salir",
 	"BUTTON_VOLVER" : "Volver al menú",
 	"BUTTON_START" : "Empezar a jugar",
+	"BUTTON_SIGN_IN" : "Entrar...",
+	"BUTTON_SIGN_UP" : "Registrarse...",
 
 	"TITLE_SINGLE_PLAYER_SCREEN" : "Prepárate...",
+	"SUBTITLE_SIGNIN_SP" : "Introduce tus datos para iniciar sesión",
 
 	"TOOGLE_LEVEL_EASY" : "Nivel fácil",
 	"TOOGLE_LEVEL_MIDDLE" : "Nivel medio",
@@ -24,9 +27,12 @@
 	"TOOGLE_CITY_FOURTH":"Villa Wool",
 	"TOOGLE_CITY_FIVETH":"Puerto Scooltown",
 
-	 "DESCRIPT_EASY" : "Comienza tu historia al modo más fácil, pero no te confíes o perecerás.",
-     "DESCRIPT_MIDDLE" : "Comienza tu historia en un modo más normal, deberás ser cauto.",
-	 "DESCRIPT_HARD" : "Comienza tu historia al modo más difícil, esfuérzate al máximo o perecerás.",
-	 "DESCRIPT_EXTREME" : "Comienza tu historia en un modo extremo, aquí las argucias no te servirán, deberás mostrar tu parte más estratégica o perecerás en un instante.",
-	 "DESCRIPT_BASE" : "La estrategia de combate va aumentado a cada nivel y cada vez te resultará un poco más complicado ir avanzando.{$BR$}{$BR$}Elije una de las {$VAR$} batallas que debes afrontar, pero elije sabiamente, no podrás rectificar tu decisión. Como buen comandante, seguro que la decisión será la más adecuada."
+	"DESCRIPT_EASY" : "Comienza tu historia al modo más fácil, pero no te confíes o perecerás.",
+    "DESCRIPT_MIDDLE" : "Comienza tu historia en un modo más normal, deberás ser cauto.",
+	"DESCRIPT_HARD" : "Comienza tu historia al modo más difícil, esfuérzate al máximo o perecerás.",
+	"DESCRIPT_EXTREME" : "Comienza tu historia en un modo extremo, aquí las argucias no te servirán, deberás mostrar tu parte más estratégica o perecerás en un instante.",
+	"DESCRIPT_BASE" : "La estrategia de combate va aumentado a cada nivel y cada vez te resultará un poco más complicado ir avanzando.{$BR$}{$BR$}Elije una de las {$VAR$} batallas que debes afrontar, pero elije sabiamente, no podrás rectificar tu decisión. Como buen comandante, seguro que la decisión será la más adecuada.",
+
+	"PLACEHOLDER_USERNAME" : "Introduce tu nombre de usuario",
+	"PLACEHOLDER_PASSWORD" : "Introduce tu contraseña"
 }
