@@ -34,5 +34,10 @@
 	"DESCRIPT_BASE" : "La estrategia de combate va aumentado a cada nivel y cada vez te resultará un poco más complicado ir avanzando.{$BR$}{$BR$}Elije una de las {$VAR$} batallas que debes afrontar, pero elije sabiamente, no podrás rectificar tu decisión. Como buen comandante, seguro que la decisión será la más adecuada.",
 
 	"PLACEHOLDER_USERNAME" : "Introduce tu nombre de usuario",
-	"PLACEHOLDER_PASSWORD" : "Introduce tu contraseña"
+	"PLACEHOLDER_PASSWORD" : "Introduce tu contraseña",
+
+	"ERROR_USER_EXIST" : "El usuario es correcto, iniciando sesión...",
+	"ERROR_USER_NOT_EXIST" : "El usuario no existe o es incorrecto.",
+	"ERROR_UNABLE_TO_CONNECT_SERVER" : "Fallo al conectar con el servidor.",
+	"ERROR_TIMEOUT" : "Tiempo de espera agotado. Por favor, vuelve a intentarlo."
 }

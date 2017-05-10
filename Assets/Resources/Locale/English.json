@@ -34,5 +34,10 @@
 	"DESCRIPT_BASE" : "The combat strategy is increased at each level and each time you will find it a little more complicated to move forward.{$BR$}{$BR$}Choose one of the {$VAR$} battles you must face, but choose wisely, you will not be able to rectify your decision. As a good commander, the decision will be most appropriate.",
 
 	"PLACEHOLDER_USERNAME" : "Enter user name",
-	"PLACEHOLDER_PASSWORD" : "Enter user password"
+	"PLACEHOLDER_PASSWORD" : "Enter user password",
+	
+	"ERROR_USER_EXIST" : "The user is correct, logging in ..",
+	"ERROR_USER_NOT_EXIST" : "The user does not exist or is incorrect.",
+	"ERROR_UNABLE_TO_CONNECT_SERVER" : "Fail to connect server.",
+	"ERROR_TIMEOUT" : "Timeout. Please, try again."
 }
