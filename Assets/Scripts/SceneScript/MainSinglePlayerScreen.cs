@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using LitJson;
+using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class MainSinglePlayerScreen : MonoBehaviour {
@@ -27,13 +29,25 @@ public class MainSinglePlayerScreen : MonoBehaviour {
         textMessages.text = "conectando...";
         user.interactable = false;
         pass.interactable = false;
-        ExceptionGame result = DB.GetInstance().LoginUser(user.text, pass.text);
-        if (result.code != ExceptionGame.ResponseCode.CODE_200) {
-            textMessages.text = result.message;
+        DB.GetInstance().LoginUser(user.text, pass.text);
+        JsonData response = DB.GetInstance().GetResponse();
+        ExceptionGame.ResponseCode code = DB.GetInstance().ResponseCode(response);
+        
+        string message;
+        if (code != ExceptionGame.ResponseCode.CODE_200) {
+            if (code == ExceptionGame.ResponseCode.CODE_404) {
+                Debug.Log("Conection Fail");
+                message = LocaleManager.GetInstance().TranslateStr("ERROR_USER_NOT_EXIST");
+            } else {
+                Debug.Log("FAIL TO CONNECT SERVER");
+                message = LocaleManager.GetInstance().TranslateStr("ERROR_UNABLE_TO_CONNECT_SERVER");
+            }
             user.interactable = true;
             pass.interactable = true;
         } else {
+            message = LocaleManager.GetInstance().TranslateStr("ERROR_USER_EXIST");
             Controllers.GetInstance().HideFloatingLayouts();
         }
+        textMessages.text = message;
     }
 }

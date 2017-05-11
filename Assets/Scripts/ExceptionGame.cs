@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 /**
 * Response codes:
@@ -10,17 +8,32 @@ using UnityEngine;
 *  
 *  - 400: Connection unsuccessfull
 */
-public class ExceptionGame {
+public class ExceptionGame : IEnumerator {
 
     public enum ResponseCode {
-        CODE_100, CODE_200, CODE_400, CODE_404
+        CODE_000, CODE_100, CODE_200, CODE_400, CODE_404
     }
 
     public ResponseCode code;
     public string message;
 
+    public object Current {
+        get {
+            return message;
+        }
+    }
+
     public ExceptionGame(ResponseCode code, string message) {
         this.code = code;
         this.message = message;
+    }
+
+    public bool MoveNext() {
+        return true;
+    }
+
+    public void Reset() {
+        message = null;
+        code = ResponseCode.CODE_000;
     }
 }
