@@ -36,4 +36,20 @@ public class ExceptionGame : IEnumerator {
         message = null;
         code = ResponseCode.CODE_000;
     }
+
+    public static ExceptionGame.ResponseCode Parse(int code) {
+        ExceptionGame.ResponseCode result = ExceptionGame.ResponseCode.CODE_000;
+        switch (code) {
+            case 200:
+                result = ExceptionGame.ResponseCode.CODE_200;
+                break;
+            case 400:
+                result = ExceptionGame.ResponseCode.CODE_400;
+                break;
+            case 404:
+                result = ExceptionGame.ResponseCode.CODE_404;
+                break;
+        }
+        return result;
+    }
 }

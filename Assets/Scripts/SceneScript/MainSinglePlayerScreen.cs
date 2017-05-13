@@ -23,31 +23,38 @@ public class MainSinglePlayerScreen : MonoBehaviour {
 
     public void StartGame() {
         Controllers.GetInstance().ShowFloatingLayouts("login");
+        StartCoroutine(DB.GetInstance().LoginUser(user.text, pass.text));
     }
 
     public void Login() {
-        textMessages.text = "conectando...";
-        user.interactable = false;
-        pass.interactable = false;
-        DB.GetInstance().LoginUser(user.text, pass.text);
-        JsonData response = DB.GetInstance().GetResponse();
-        ExceptionGame.ResponseCode code = DB.GetInstance().ResponseCode(response);
-        
-        string message;
-        if (code != ExceptionGame.ResponseCode.CODE_200) {
-            if (code == ExceptionGame.ResponseCode.CODE_404) {
-                Debug.Log("Conection Fail");
-                message = LocaleManager.GetInstance().TranslateStr("ERROR_USER_NOT_EXIST");
+        StartCoroutine(DB.GetInstance().LoginUser(user.text, pass.text));
+        if (DB.GetInstance().GetResponseText() != null) {
+            textMessages.text = LocaleManager.GetInstance().TranslateStr("CONNECTING_SERVER");
+            user.interactable = false;
+            pass.interactable = false;
+            Debug.Log("aqui entra");
+            JsonData response = DB.GetInstance().JSONResponse();
+            ExceptionGame.ResponseCode code = ExceptionGame.Parse((int)response[DB.RESPONSE_LABEL]);
+            string message;
+            if (code != ExceptionGame.ResponseCode.CODE_200) {
+                user.interactable = true;
+                //user.text = null;
+                pass.interactable = true;
+                pass.text = null;
+                if (code == ExceptionGame.ResponseCode.CODE_404) {
+                    Debug.Log("Conection Fail");
+                    message = LocaleManager.GetInstance().TranslateStr("ERROR_USER_NOT_EXIST");
+                } else {
+                    Debug.Log("FAIL TO CONNECT SERVER");
+                    message = LocaleManager.GetInstance().TranslateStr("ERROR_UNABLE_TO_CONNECT_SERVER");
+                }
             } else {
-                Debug.Log("FAIL TO CONNECT SERVER");
-                message = LocaleManager.GetInstance().TranslateStr("ERROR_UNABLE_TO_CONNECT_SERVER");
+                message = LocaleManager.GetInstance().TranslateStr("INFO_USER_EXIST");
+                Controllers.GetInstance().HideFloatingLayouts();
             }
-            user.interactable = true;
-            pass.interactable = true;
-        } else {
-            message = LocaleManager.GetInstance().TranslateStr("ERROR_USER_EXIST");
-            Controllers.GetInstance().HideFloatingLayouts();
+            Debug.Log("MSJ: " + message);
+            textMessages.text = message;
         }
-        textMessages.text = message;
+        DB.GetInstance().CloseDB();
     }
 }

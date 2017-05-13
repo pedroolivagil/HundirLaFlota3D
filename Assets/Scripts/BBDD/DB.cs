@@ -4,12 +4,13 @@ using LitJson;
 
 public class DB : MonoBehaviour {
 
-    public string url_host = "http://localhost/testHundirFlota3D";
+    public static string RESPONSE_LABEL = "response";
+
+    public string url_host = "http://localhost/HundirLaFlota3DServer";
     public string url_login = "/www/login.php";
 
     private static DB instance = null;
-    private WWW con;
-    private JsonData response;
+    private string responseText;
 
     public static DB GetInstance() {
         init();
@@ -27,43 +28,18 @@ public class DB : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
     }
 
-    private JsonData ParseResponse(string response) {
-        return JsonMapper.ToObject(response);
-    }
-
     private IEnumerator Connection(WWWForm data) {
-        con = new WWW(url_host + url_login, data);
+        WWW con = new WWW(url_host + url_login, data);
         yield return con;
-        Response();
+        responseText = con.text;
     }
 
-    private void Response() {
-        if (con.isDone) {
-            this.response = ParseResponse(con.text);
-        }
+    public JsonData JSONResponse() {
+        return JsonMapper.ToObject(responseText);
     }
 
-    public ExceptionGame.ResponseCode ResponseCode(JsonData responseLocal) {
-        ExceptionGame.ResponseCode result = ExceptionGame.ResponseCode.CODE_000;
-        Debug.Log(responseLocal["response"]);
-        if (responseLocal["response"] != null) {
-            switch ((int)responseLocal["response"]) {
-                case 200:
-                    result = ExceptionGame.ResponseCode.CODE_200;
-                    break;
-                case 400:
-                    result = ExceptionGame.ResponseCode.CODE_400;
-                    break;
-                case 404:
-                    result = ExceptionGame.ResponseCode.CODE_404;
-                    break;
-            }
-        }
-        return result;
-    }
-
-    public JsonData GetResponse() {
-        return response;
+    public string GetResponseText() {
+        return responseText;
     }
 
     public IEnumerator LoginUser(string user, string pass) {
@@ -71,5 +47,9 @@ public class DB : MonoBehaviour {
         data.AddField("user", user);
         data.AddField("pass", pass);
         yield return StartCoroutine(Connection(data));
+    }
+
+    public void CloseDB() {
+        responseText = null;
     }
 }

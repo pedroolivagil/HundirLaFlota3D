@@ -36,7 +36,8 @@
 	"PLACEHOLDER_USERNAME" : "Enter user name",
 	"PLACEHOLDER_PASSWORD" : "Enter user password",
 	
-	"ERROR_USER_EXIST" : "The user is correct, logging in ..",
+	"CONNECTING_SERVER":"",
+	"INFO_USER_EXIST" : "The user is correct, logging in ..",
 	"ERROR_USER_NOT_EXIST" : "The user does not exist or is incorrect.",
 	"ERROR_UNABLE_TO_CONNECT_SERVER" : "Fail to connect server.",
 	"ERROR_TIMEOUT" : "Timeout. Please, try again."
