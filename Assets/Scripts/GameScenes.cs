@@ -3,4 +3,5 @@
     public static string ExitScreen = "ExitScreen";
     public static string BlackScreen = "BlackScreen";
     public static string StarterSinglePlayer = "MainSinglePlayer";
+    public static string GameSP = "GameSP";
 }

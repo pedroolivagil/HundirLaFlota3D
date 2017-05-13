@@ -28,8 +28,8 @@ public class DB : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
     }
 
-    private IEnumerator Connection(WWWForm data) {
-        WWW con = new WWW(url_host + url_login, data);
+    private IEnumerator Connection(WWWForm data, string url) {
+        WWW con = new WWW(url_host + url, data);
         yield return con;
         responseText = con.text;
     }
@@ -46,7 +46,7 @@ public class DB : MonoBehaviour {
         WWWForm data = new WWWForm();
         data.AddField("user", user);
         data.AddField("pass", pass);
-        yield return StartCoroutine(Connection(data));
+        yield return StartCoroutine(Connection(data, url_login));
     }
 
     public void CloseDB() {

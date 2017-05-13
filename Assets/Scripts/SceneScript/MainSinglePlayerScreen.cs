@@ -51,10 +51,16 @@ public class MainSinglePlayerScreen : MonoBehaviour {
             } else {
                 message = LocaleManager.GetInstance().TranslateStr("INFO_USER_EXIST");
                 Controllers.GetInstance().HideFloatingLayouts();
+                StartCoroutine(StartSP());
             }
             Debug.Log("MSJ: " + message);
             textMessages.text = message;
         }
         DB.GetInstance().CloseDB();
+    }
+
+    public IEnumerator StartSP() {
+        yield return new WaitForSeconds(2);
+        GameManager.ChangeScreen(GameScenes.GameSP, true);
     }
 }
