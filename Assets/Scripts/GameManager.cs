@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour {
     private static int gameMode;
     private static List<Resolution> listResolution;
 
+    private User usuario;
+
     // Use this for initialization
     void Start() {
         StartCoroutine(SecuencialFadeInText());
